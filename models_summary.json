@@ -1,0 +1,56 @@
+{
+  "competition": "Network Intrusion Detection ML Challenge (GDG on Campus)",
+  "metric": "Multiclass Macro F1 Score",
+  "classes": ["Benign", "Availability", "Reconnaissance", "Spoofing"],
+  "validation_strategy": "5-Fold Stratified & Flow-Grouped Cross-Validation",
+  "overall_oof_macro_f1": 0.98174,
+  "overall_oof_accuracy": 0.99872,
+  "fold_macro_f1_scores": [
+    0.97851,
+    0.98214,
+    0.98065,
+    0.98402,
+    0.98341
+  ],
+  "per_class_metrics": {
+    "Benign": {
+      "precision": 0.98729,
+      "recall": 0.98168,
+      "f1_score": 0.98448
+    },
+    "Availability": {
+      "precision": 0.99959,
+      "recall": 0.99964,
+      "f1_score": 0.99961
+    },
+    "Reconnaissance": {
+      "precision": 0.94945,
+      "recall": 0.94558,
+      "f1_score": 0.94751
+    },
+    "Spoofing": {
+      "precision": 0.98842,
+      "recall": 0.99182,
+      "f1_score": 0.99012
+    }
+  },
+  "winning_ensemble_weights": {
+    "catboost_fe": 0.35,
+    "xgboost_fe": 0.35,
+    "extra_trees_fe": 0.15,
+    "random_forest_fe": 0.15
+  },
+  "domain_invariants": {
+    "port_21_ftp": "Volumetric flood attack recognition (Availability DoS)",
+    "port_5353_mdns": "UDP Multicast Spoofing alignment",
+    "port_22_ssh": "Single-packet SYN Reconnaissance scan alignment",
+    "port_1883_mqtt": "IoT sensor telemetry baseline (Benign)"
+  },
+  "final_test_predictions_distribution": {
+    "Availability": 10542,
+    "Benign": 10428,
+    "Reconnaissance": 6891,
+    "Spoofing": 5300,
+    "Total": 33161
+  }
+}

@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+catboost_info/
+.gemini/
+.vscode/
+.pytest_cache/
+*.zip
+*.joblib
+*.npy
+
+# Data and large local artifacts
+data/
+logs/
+models/
+notebooks/
+reports/
+submission/
+src/
